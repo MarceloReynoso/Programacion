@@ -1,0 +1,134 @@
+Ejercicio 1: Desarrollar un algoritmo que solicite al usuario ingresar dos números enteros distintos, los almacene en dos variables diferentes y luego calcule la suma de estos números.
+
+Proceso Ejercicio_1
+    // Declaración de variables
+    Definir num1, num2, suma Como Entero
+
+    // Solicitar al usuario ingresar los números
+    Escribir "Ingrese el primer número entero:"
+    Leer num1
+    Escribir "Ingrese el segundo número entero (distinto del primero):"
+    Leer num2
+
+    // Verificar que sean distintos
+    Si num1 = num2 Entonces
+        Escribir "Los números deben ser distintos."
+    Sino
+        // Calcular la suma
+        suma <- num1 + num2
+        // Mostrar el resultado
+        Escribir "La suma de ", num1, " y ", num2, " es: ", suma
+    FinSi
+FinProceso
+
+Ejercicio 2: Desarrollar un algoritmo que solicite al usuario ingresar dos números enteros y calcule la resta del primer número menos el segundo número.
+
+Proceso Ejercicio_2
+    // Declaración de variables
+    Definir num1, num2, resta Como Entero
+
+    // Solicitar al usuario los números
+    Escribir "Ingrese el primer número entero:"
+    Leer num1
+    Escribir "Ingrese el segundo número entero:"
+    Leer num2
+
+    // Calcular la resta (primer número menos el segundo)
+    resta <- num1 - num2
+
+    // Mostrar el resultado
+    Escribir "El resultado de ", num1, " menos ", num2, " es: ", resta
+FinProceso
+
+Ejercicio 3: Desarrollar un algoritmo que solicite al usuario ingresar dos números enteros y calcule el producto de estos números.
+
+Proceso Ejercicio_3
+    // Declaración de variables
+    Definir num1, num2, producto Como Entero
+
+    // Solicitar al usuario los números
+    Escribir "Ingrese el primer número entero:"
+    Leer num1
+    Escribir "Ingrese el segundo número entero:"
+    Leer num2
+
+    // Calcular el producto
+    producto <- num1 * num2
+
+    // Mostrar el resultado
+    Escribir "El producto de ", num1, " y ", num2, " es: ", producto
+FinProceso
+
+Ejercicio 4: Desarrollar un algoritmo que solicite al usuario ingresar dos números enteros y calcule la división del primer número entre el segundo número. Se debe tener en cuenta manejar la división por cero.
+
+Proceso Ejercicio_4
+    // Declaración de variables
+    Definir num1, num2 Como Entero
+    Definir division Como Real
+
+    // Solicitar al usuario los números
+    Escribir "Ingrese el primer número entero:"
+    Leer num1
+    Escribir "Ingrese el segundo número entero:"
+    Leer num2
+
+    // Verificar que el divisor no sea cero
+    Si num2 = 0 Entonces
+        Escribir "Error: No se puede dividir por cero."
+    Sino
+        // Calcular la división
+        division <- num1 / num2
+        // Mostrar el resultado
+        Escribir "El resultado de ", num1, " dividido entre ", num2, " es: ", division
+    FinSi
+FinProceso
+
+Ejercicio 5: Desarrollar un algoritmo que solicite al usuario ingresar dos números enteros diferentes y determine si cada uno de ellos es un número primo o no.
+
+Proceso Ejercicio_5
+    // Declaración de variables
+    Definir num1, num2, i, contador1, contador2 Como Entero
+
+    // Solicitar al usuario los números
+    Escribir "Ingrese el primer número entero:"
+    Leer num1
+    Escribir "Ingrese el segundo número entero (distinto del primero):"
+    Leer num2
+
+    // Verificar que sean distintos
+    Si num1 = num2 Entonces
+        Escribir "Error: los números deben ser distintos."
+    Sino
+        // Inicializar contadores de divisores
+        contador1 <- 0
+        contador2 <- 0
+
+        // Verificar si el primer número es primo
+        Para i <- 1 Hasta num1 Con Paso 1 Hacer
+            Si num1 MOD i = 0 Entonces
+                contador1 <- contador1 + 1
+            FinSi
+        FinPara
+
+        // Verificar si el segundo número es primo
+        Para i <- 1 Hasta num2 Con Paso 1 Hacer
+            Si num2 MOD i = 0 Entonces
+                contador2 <- contador2 + 1
+            FinSi
+        FinPara
+
+        // Mostrar resultados
+        Si contador1 = 2 Entonces
+            Escribir "El número ", num1, " es primo."
+        Sino
+            Escribir "El número ", num1, " no es primo."
+        FinSi
+
+        Si contador2 = 2 Entonces
+            Escribir "El número ", num2, " es primo."
+        Sino
+            Escribir "El número ", num2, " no es primo."
+        FinSi
+    FinSi
+FinProceso
+
