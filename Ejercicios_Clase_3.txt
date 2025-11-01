@@ -1,0 +1,119 @@
+Algoritmo determinar_signo
+    Definir numero Como Real
+	
+    Escribir "Introduce un número:"
+    Leer numero
+    
+    Si numero > 0 Entonces
+        Escribir "El número es positivo"
+    Sino
+        Si numero < 0 Entonces
+            Escribir "El número es negativo"
+        Sino
+            Escribir "El número es cero"
+        FinSi
+    FinSi
+FinAlgoritmo
+
+
+
+Algoritmo determinar_par_impar
+    Definir numero Como Entero
+	
+    Escribir "Introduce un número entero:"
+    Leer numero
+    
+    Si numero % 2 = 0 Entonces
+        Escribir "El número es par"
+    Sino
+        Escribir "El número es impar"
+    FinSi
+FinAlgoritmo
+
+
+Algoritmo manejar_conjunto
+    Dimension conjunto[100]
+    Definir numero, i, tamaño Como Entero
+    Definir encontrado Como Logico
+	Definir continuar Como Caracter
+    tamaño <- 1
+    
+    Repetir
+        Escribir "Ingrese el número a agregar: "
+        Leer numero
+        
+        encontrado <- Falso
+        Para i <- 1 Hasta tamaño Con Paso 1
+            Si conjunto[i] = numero Entonces
+                encontrado <- Verdadero
+            FinSi
+        FinPara
+        
+        Si encontrado = Falso Entonces
+            conjunto[tamaño] <- numero
+            tamaño <- tamaño + 1
+            Escribir "Número agregado correctamente."
+        Sino
+            Escribir "El número ya está en el conjunto."
+        FinSi
+        
+        Escribir "¿Desea agregar otro número? (s/n): "
+        Leer continuar
+        
+    Hasta Que continuar = "n"
+    Escribir "Saliendo del programa..."
+FinAlgoritmo
+
+
+
+Algoritmo PromedioNumeros
+    Dimension numeros[5]
+    Definir suma Como Real
+    suma <- 0
+	
+    Para i <- 1 Hasta 5 Con Paso 1 Hacer
+        Escribir "Ingrese el número ", i
+        Leer numeros[i]
+        suma <- suma + numeros[i]
+    Fin Para
+	
+    promedio <- suma / 5
+    Escribir "El promedio es: ", promedio
+Fin Algoritmo
+
+
+Algoritmo ContarCaracteres
+    Definir frase Como Cadena
+    Definir largo Como Entero
+	
+    Escribir "Ingrese una frase:"
+    Leer frase
+	
+    largo <- Longitud(frase)
+    Escribir "La cantidad de caracteres de la frase es: ", largo
+Fin Algoritmo
+
+
+
+Algoritmo SumaHastaNumeroNegativo
+    Definir num, suma Como Entero
+	Definir bandera Como Logico
+	bandera = Verdadero
+    suma <- 0
+	
+    Mientras bandera Hacer
+        Escribir "Ingrese un número (un número negativo para finalizar):"
+        Leer num
+		
+        Si num >= 0 Entonces
+			suma <- suma + num
+		SiNo
+			bandera = Falso
+        Fin Si
+		
+        
+    Fin Mientras
+	
+    Escribir "La suma de los números ingresados es: ", suma
+Fin Algoritmo
+
